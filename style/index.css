@@ -48,8 +48,7 @@ body {
     margin: 0 5%;
 }
 
-/* IMAGE  */
-
+/* IMAGE */
 #container-elements .round-img-container {
     width: 35%;
     aspect-ratio: 1/1;
@@ -82,7 +81,6 @@ body {
 }
 
 /* H1 */
-
 #container-elements h1 {
     font-size: 3rem;
     color: rgb(255, 255, 255);
@@ -91,7 +89,6 @@ body {
 
 
 /* SEE MORE */
-
 .see-more {
     --color-neon: rgb(0, 255, 170);
     font-weight: lighter;
@@ -189,4 +186,38 @@ ul li a:hover {
         inset 0 0 6px rgb(255, 255, 255),
         0 0 10px rgb(0, 255, 170),
         inset 0 0 10px rgb(0, 255, 170);
+}
+
+
+
+@media (max-width: 705px) {
+    #container-elements {
+        flex-direction: column;
+    }
+
+
+    /* IMAGE  */
+    #container-elements .round-img-container {
+        width: 75%;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+
+    /* H1 */
+    #container-elements h1 {
+        font-size: 2rem;
+    }
+
+    /* SEE MORE */
+    .see-more {
+        font-size: 1.5rem;
+    }
+
+    /* SOCIAL NETWORKS */
+    ul li a {
+        width: 50px;
+        height: 50px;
+    }
 }
