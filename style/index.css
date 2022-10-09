@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: rgb(32, 32, 32);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container-first-page {
+    position: relative;
+    margin: auto;
+    background-color: transparent;
+    width: 70vw;
+    max-width: 1400px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255);
+    box-shadow:
+        0 0 5px rgb(255, 255, 255),
+        inset 0 0 5px rgb(255, 255, 255),
+        0 0 8px rgb(255, 255, 255),
+        inset 0 0 8px rgb(255, 255, 255),
+        0 0 13px rgb(0, 255, 170),
+        inset 0 0 13px rgb(0, 255, 170);
+    transition: all 0.25s;
+}
+
+#container-first-page:hover {
+    box-shadow:
+        0 0 3px rgb(255, 255, 255),
+        inset 0 0 3px rgb(255, 255, 255),
+        0 0 6px rgb(255, 255, 255),
+        inset 0 0 6px rgb(255, 255, 255),
+        0 0 10px rgb(0, 255, 170),
+        inset 0 0 10px rgb(0, 255, 170);
+}
+
+#container-elements {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#container-elements>* {
+    margin: 0 5%;
+}
+
+/* IMAGE  */
+
+#container-elements .round-img-container {
+    width: 35%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgb(0, 255, 170);
+    border-radius: 50%;
+    box-shadow:
+        0 0 3px rgb(255, 255, 255),
+        inset 0 0 3px rgb(255, 255, 255),
+        0 0 6px rgb(255, 255, 255),
+        inset 0 0 6px rgb(255, 255, 255),
+        0 0 10px rgb(0, 255, 170),
+        inset 0 0 10px rgb(0, 255, 170);
+    transition: all 0.2s;
+}
+
+#container-elements .round-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* RIGHT PART */
+#container-elements .right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* H1 */
+
+#container-elements h1 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px rgb(0, 255, 170);
+}
+
+
+/* SEE MORE */
+
+.see-more {
+    --color-neon: rgb(0, 255, 170);
+    font-weight: lighter;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: .5vw 3.5vw;
+    text-transform: uppercase;
+    animation-name: seeMoreBtnNeon;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes seeMoreBtnNeon {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        box-shadow:
+            0 0 3px rgb(255, 255, 255),
+            inset 0 0 3px rgb(255, 255, 255),
+            0 0 6px rgb(255, 255, 255),
+            inset 0 0 6px rgb(255, 255, 255),
+            0 0 10px var(--color-neon),
+            inset 0 0 10px var(--color-neon);
+        text-shadow:
+            0 0 3px rgb(255, 255, 255),
+            0 0 5px var(--color-neon);
+    }
+
+    20%, 24%, 55% {
+        box-shadow: 0 0 10px rgb(255, 255, 255);
+        text-shadow: none;
+    }
+}
+
+.see-more:hover {
+    --color-neon: rgb(255, 5, 51);
+}
+
+.see-more span::after {
+    content: "  🠲";
+}
+
+/* 🠲 ➧ 🡆 */
+
+/* SOCIAL NETWORKS */
+
+ul {
+    margin: 2em 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li:not(:first-child) {
+    margin-left: 1.5rem;
+}
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 70px;
+    height: 70px;
+    box-shadow:
+        0 0 3px rgb(255, 255, 255),
+        0 0 6px rgb(255, 255, 255),
+        0 0 10px rgb(0, 255, 170);
+    border-radius: 50%;
+    transition: ease-in-out 0.25s;
+}
+
+ul li a svg {
+    width: 50%;
+    height: 50%;
+}
+
+ul li a svg path {
+    fill: rgb(0, 0, 0);
+    transition: ease-in-out 0.2s;
+}
+
+ul li a:hover svg path {
+    fill: rgb(255, 255, 255);
+}
+
+ul li a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow:
+        0 0 3px rgb(255, 255, 255),
+        inset 0 0 3px rgb(255, 255, 255),
+        0 0 6px rgb(255, 255, 255),
+        inset 0 0 6px rgb(255, 255, 255),
+        0 0 10px rgb(0, 255, 170),
+        inset 0 0 10px rgb(0, 255, 170);
+}
