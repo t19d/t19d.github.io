@@ -1,0 +1,457 @@
+body {
+    /* background-color: rgb(32, 32, 32); */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #454e56;
+}
+
+a {
+    color: rgba(69, 78, 86);
+    transition: all .3s;
+}
+
+a:hover {
+    color: rgb(0, 168, 168);
+}
+
+.separator {
+    width: 90%;
+    height: 1px;
+    background-color: rgba(69, 78, 86, 0.5);
+}
+
+#container-cv {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 1px rgba(69, 78, 86, 0.5);
+    box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+
+.title-section {
+    font-weight: 100;
+    font-size: 3rem;
+    margin-block-end: 0.1rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* JOBS */
+.jobs {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.job {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    margin: .5rem 0;
+}
+
+.job:not(:last-child) {
+    border-bottom: 1px solid rgba(69, 78, 86, 0.5);
+}
+
+.job .company {
+    max-width: 150px;
+    min-width: 150px;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.job .company h2 {
+    margin-block-start: 0.20em;
+}
+
+.company img {
+    width: 10vw;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+}
+
+/* LISTS */
+.about-job ul {
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+.about-job ul li {
+    list-style-type: none;
+}
+
+/* LIST CHALLENGES */
+
+.about-job .challenges li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-job .challenges li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #00a8a8;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+}
+
+/* LIST COMPETENCES */
+.about-job .competences {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-job .competences li {
+    padding: .3rem .5rem;
+    margin: .25rem .1rem;
+    font-weight: 600;
+    background-color: #454e56;
+    border: 1px solid #454e56;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.about-job .competences li a {
+    color: #b2becd;
+    text-decoration: none;
+}
+
+
+/* TAGS */
+.about-job .competences li.angular:hover {
+    background-color: #e23137;
+    color: #ffffff;
+}
+
+.about-job .competences li.angular:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.css:hover {
+    background-color: #2965f1;
+    color: #ffffff;
+}
+
+.about-job .competences li.css:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.docker:hover {
+    background-color: #def1f9;
+    color: #066da5;
+}
+
+.about-job .competences li.docker:hover a {
+    color: #066da5;
+}
+
+.about-job .competences li.git:hover {
+    background-color: #f05133;
+    color: #ffffff;
+}
+
+.about-job .competences li.git:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.html:hover {
+    background-color: #f16529;
+    color: #ffffff;
+}
+
+.about-job .competences li.html:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.ionic:hover {
+    background-color: #ffffff;
+    color: #488bff;
+}
+
+.about-job .competences li.ionic:hover a {
+    color: #488bff;
+}
+
+.about-job .competences li.java:hover {
+    background-color: #ffffff;
+    color: #e76f00;
+}
+
+.about-job .competences li.java:hover a {
+    color: #e76f00;
+}
+
+.about-job .competences li.javascript:hover {
+    background-color: #f0db4e;
+    color: #323230;
+}
+
+.about-job .competences li.javascript:hover a {
+    color: #323230;
+}
+
+.about-job .competences li.mongodb:hover {
+    background-color: #027f5d;
+    color: #cee7a5;
+}
+
+.about-job .competences li.mongodb:hover a {
+    color: #cee7a5;
+}
+
+.about-job .competences li.nodejs:hover {
+    background-color: #90c53f;
+    color: #46483d;
+}
+
+.about-job .competences li.nodejs:hover a {
+    color: #46483d;
+}
+
+.about-job .competences li.nosql:hover {
+    background-color: #ffffff;
+    color: #2163c6;
+}
+
+.about-job .competences li.nosql:hover a {
+    color: #2163c6;
+}
+
+.about-job .competences li.prestashop:hover {
+    background-color: #b0ddec;
+    color: #de0067;
+}
+
+.about-job .competences li.prestashop:hover a {
+    color: #de0067;
+}
+
+.about-job .competences li.python:hover {
+    background-color: #3879ab;
+    color: #ffda5d;
+}
+
+.about-job .competences li.python:hover a {
+    color: #ffda5d;
+}
+
+.about-job .competences li.sql:hover {
+    background-color: #1e4056;
+    color: #ffffff;
+}
+
+.about-job .competences li.sql:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.svn:hover {
+    background-color: #809cc8;
+    color: #ffffff;
+}
+
+.about-job .competences li.svn:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.typescript:hover {
+    background-color: #007acc;
+    color: #ffffff;
+}
+
+.about-job .competences li.typescript:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.windows:hover {
+    background-color: #0178d4;
+    color: #ffffff;
+}
+
+.about-job .competences li.windows:hover a {
+    color: #ffffff;
+}
+
+.about-job .competences li.wordpress:hover {
+    background-color: #464646;
+    color: #ffffff;
+}
+
+.about-job .competences li.wordpress:hover a {
+    color: #ffffff;
+}
+
+/* EDUACATION / CERTIFICATES => PC */
+#education-certificates-pc {
+    display: flex;
+    align-items: stretch;
+}
+
+#education-certificates-pc>section {
+    width: 50%;
+}
+
+/* EDUCATION */
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-right: 2px solid rgba(69, 78, 86, 0.5);
+}
+
+.study {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+
+.study h3 {
+    margin: .2rem 0;
+}
+
+/* CERTIFICATES */
+.certificates {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.certificate {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+
+.certificate h3 {
+    margin: .2rem 0;
+}
+
+/* SKILS */
+
+.skills {
+    width: 90%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.skills>article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid;
+    width: 15vw;
+    margin: .1rem;
+}
+
+.skills>article>h2 {
+    margin-top: 0;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.level .scale {
+    display: flex;
+    align-items: flex-end;
+    width: 5vw;
+    aspect-ratio: 3/2;
+}
+
+.level .scale>* {
+    margin: 0 .1vw;
+    border-radius: 15px;
+    width: 20%;
+    background-color: rgba(69, 78, 86, .25);
+}
+
+.level .scale .level-1 {
+    height: 30%;
+}
+
+.level .scale .level-2 {
+    height: 48%;
+}
+
+.level .scale .level-3 {
+    height: 64%;
+}
+
+.level .scale .level-4 {
+    height: 82%;
+}
+
+.level .scale .level-5 {
+    height: 100%;
+}
+
+.level:has(.check-level-1) .scale>*:not(.level-2):not(.level-3):not(.level-4):not(.level-5) {
+    background-color: rgb(255, 0, 0);
+}
+
+.level:has(.check-level-2) .scale>*:not(.level-3):not(.level-4):not(.level-5) {
+    background-color: rgb(255, 127, 0);
+}
+
+.level:has(.check-level-3) .scale>*:not(.level-4):not(.level-5) {
+    background-color: rgb(255, 255, 0);
+}
+
+.level:has(.check-level-4) .scale>*:not(.level-5) {
+    background-color: rgb(0, 127, 255);
+}
+
+.level:has(.check-level-5) .scale>* {
+    background-color: rgb(0, 255, 127);
+}
