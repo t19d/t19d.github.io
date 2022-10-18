@@ -1,3 +1,12 @@
+:root {
+    --android-background-color: #3dda84;
+    --android-text-color: #ffffff;
+    --angular-background-color: #e23137;
+    --angular-text-color: #ffffff;
+    --boostrap-background-color: #60408c;
+    --css-background-color: #2965f1;
+}
+
 body {
     /* background-color: rgb(32, 32, 32); */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -55,6 +64,7 @@ a:hover {
 }
 
 .job {
+    max-width: 1200px;
     display: flex;
     align-items: flex-start;
     width: 90%;
@@ -79,6 +89,8 @@ a:hover {
 }
 
 .company img {
+    max-width: 150px;
+    min-width: 150px;
     width: 10vw;
     aspect-ratio: 1/1;
     border-radius: 12px;
@@ -126,11 +138,11 @@ a:hover {
 
 .about-job .competences li {
     padding: .3rem .5rem;
-    margin: .25rem .1rem;
+    margin: .25rem .2rem;
     font-weight: 600;
     background-color: #454e56;
-    border: 1px solid #454e56;
     border-radius: 5px;
+    box-shadow: 0 0 4px rgb(69 78 86 / 75%);
     transition: all .3s;
 }
 
@@ -142,7 +154,7 @@ a:hover {
 
 /* TAGS */
 .about-job .competences li.angular:hover {
-    background-color: #e23137;
+    background-color: var(--angular-background-color);
     color: #ffffff;
 }
 
@@ -151,7 +163,7 @@ a:hover {
 }
 
 .about-job .competences li.css:hover {
-    background-color: #2965f1;
+    background-color: var(--css-background-color);
     color: #ffffff;
 }
 
@@ -368,8 +380,8 @@ a:hover {
     margin: .2rem 0;
 }
 
-/* SKILS */
 
+/* SKILS */
 .skills {
     width: 90%;
     display: inline-flex;
@@ -378,80 +390,298 @@ a:hover {
     align-content: center;
     justify-content: center;
     align-items: stretch;
+
+    --size-chart: 12rem;
+}
+
+/* CHARTS */
+.skills>article *, .skills>article *:before, .skills>article *:after {
+    box-sizing: border-box;
+}
+
+/* Size */
+.pie-wrapper,
+.pie-wrapper .pie .circle-line {
+    width: var(--size-chart);
+    height: var(--size-chart);
 }
 
 .skills>article {
+    font-size: var(--size-chart);
+    border-radius: 50%;
+    margin: 2rem;
+    background-color: transparent;
+    cursor: default;
+}
+
+.pie-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.pie-wrapper .label {
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid;
-    width: 15vw;
-    margin: .1rem;
+    background: #454e56;
+    color: #b2becd;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #454e56;
+    z-index: 1;
+    transition: all 0.3s;
 }
 
-.skills>article>h2 {
-    margin-top: 0;
+.pie-wrapper .label * {
+    z-index: 1;
+    font-size: 1.5rem;
+    margin: 0;
 }
 
-.level {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+.pie-wrapper .label h3 {
+    text-shadow: 1px 1px 0.25rem rgb(255 255 255 / 25%);
 }
 
-.level .scale {
-    display: flex;
-    align-items: flex-end;
-    width: 5vw;
-    aspect-ratio: 3/2;
+.pie-wrapper .label span {
+    font-style: italic;
+    font-size: 3rem;
+    text-shadow: 1px 1px 0.25rem rgb(255 255 255 / 25%);
 }
 
-.level .scale>* {
-    margin: 0 .1vw;
-    border-radius: 15px;
-    width: 20%;
-    background-color: rgba(69, 78, 86, .25);
+.pie-wrapper .pie .circle-line {
+    border: 1rem solid #b2becd;
+    border-radius: 50%;
+    position: absolute;
 }
 
-.level .scale .level-1 {
-    height: 30%;
+.pie-wrapper.progress-00 .pie .circle-line {
+    border: none;
 }
 
-.level .scale .level-2 {
-    height: 48%;
+.pie-wrapper.progress-05 .pie .circle-line {
+    clip-path: polygon(50% 0%, 70% 0, 50% 50%);
 }
 
-.level .scale .level-3 {
-    height: 64%;
+.pie-wrapper.progress-10 .pie .circle-line {
+    clip-path: polygon(50% 0%, 90% 0, 50% 50%);
 }
 
-.level .scale .level-4 {
-    height: 82%;
+.pie-wrapper.progress-15 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 10%, 50% 50%);
 }
 
-.level .scale .level-5 {
-    height: 100%;
+.pie-wrapper.progress-20 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 30%, 50% 50%);
 }
 
-.level:has(.check-level-1) .scale>*:not(.level-2):not(.level-3):not(.level-4):not(.level-5) {
-    background-color: rgb(255, 0, 0);
+.pie-wrapper.progress-25 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 50% 50%);
 }
 
-.level:has(.check-level-2) .scale>*:not(.level-3):not(.level-4):not(.level-5) {
-    background-color: rgb(255, 127, 0);
+.pie-wrapper.progress-30 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 70%, 50% 50%);
 }
 
-.level:has(.check-level-3) .scale>*:not(.level-4):not(.level-5) {
-    background-color: rgb(255, 255, 0);
+.pie-wrapper.progress-35 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 90%, 50% 50%);
 }
 
-.level:has(.check-level-4) .scale>*:not(.level-5) {
-    background-color: rgb(0, 127, 255);
+.pie-wrapper.progress-40 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 90% 100%, 50% 50%);
 }
 
-.level:has(.check-level-5) .scale>* {
-    background-color: rgb(0, 255, 127);
+.pie-wrapper.progress-45 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 70% 100%, 50% 50%);
+}
+
+.pie-wrapper.progress-50 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 50% 50%);
+}
+
+.pie-wrapper.progress-55 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 30% 100%, 50% 50%);
+}
+
+.pie-wrapper.progress-60 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 10% 100%, 50% 50%);
+}
+
+.pie-wrapper.progress-65 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 90%, 50% 50%);
+}
+
+.pie-wrapper.progress-70 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 70%, 50% 50%);
+}
+
+.pie-wrapper.progress-75 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%, 50% 50%);
+}
+
+.pie-wrapper.progress-80 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 30%, 50% 50%);
+}
+
+.pie-wrapper.progress-85 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 10%, 50% 50%);
+}
+
+.pie-wrapper.progress-90 .pie .circle-line {
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%, 10% 0%, 50% 50%);
+}
+
+.pie-wrapper.progress-95 .pie .circle-line {
+    -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%, 0% 0%, 50% 50%);
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%, 30% 0%, 50% 50%);
+}
+
+/* 
+    0%     => 50 0
+        5  => 70 0
+        10 => 90 0
+    12.5%  => 100 0
+        15 => 100 10
+        20 => 100 30
+    25%    => 100 50
+        30 => 100 70
+        35 => 100 90
+    37.5%  => 100 100
+        40 => 90 100
+        45 => 70 100
+    50%    => 50 100
+        55 => 30 100
+        60 => 10 100
+    62.5%  => 0 100
+        65 => 0 90
+        70 => 0 70
+    75%    => 0 50
+        80 => 0 30
+        85 => 0 10
+    87.5%  => 0 0
+        90 => 10 0
+        95 => 30 0
+    100%   => 50 0
+
+    12.5 pts => 50%
+    1    pts  => 4%
+*/
+
+.skills #android:hover .label {
+    background-color: var(--android-background-color);
+    color: var(--android-text-color);
+}
+
+.skills #angular:hover .label {
+    background-color: var(--angular-background-color);
+    color: var(--angular-text-color);
+}
+
+.skills #bootstrap:hover .label {
+    background-color: var(--boostrap-background-color);
+    color: #ffffff;
+}
+
+.skills #css:hover .label {
+    background-color: var(--css-background-color);
+    color: #ffffff;
+}
+
+.skills #docker:hover .label {
+    background-color: #def1f9;
+    color: #066da5;
+}
+
+.skills #git:hover .label {
+    background-color: #f05133;
+    color: #ffffff;
+}
+
+.skills #html:hover .label {
+    background-color: #f16529;
+    color: #ffffff;
+}
+
+.skills #ionic:hover .label {
+    background-color: #ffffff;
+    color: #488bff;
+}
+
+.skills #java:hover .label {
+    background-color: #ffffff;
+    color: #e76f00;
+}
+
+.skills #javascript:hover .label {
+    background-color: #f0db4e;
+    color: #323230;
+}
+
+.skills #mongodb:hover .label {
+    background-color: #027f5d;
+    color: #cee7a5;
+}
+
+.skills #nodejs:hover .label {
+    background-color: #90c53f;
+    color: #46483d;
+}
+
+.skills #nosql:hover .label {
+    background-color: #ffffff;
+    color: #2163c6;
+}
+
+.skills #php:hover .label {
+    background-color: #8993be;
+    color: #232531;
+}
+
+.skills #prestashop:hover .label {
+    background-color: #b0ddec;
+    color: #de0067;
+}
+
+.skills #python:hover .label {
+    background-color: #3879ab;
+    color: #ffda5d;
+}
+
+.skills #react:hover .label {
+    background-color: #001e26;
+    color: #00afde;
+}
+
+.skills #sql:hover .label {
+    background-color: #1e4056;
+    color: #ffffff;
+}
+
+.skills #svn:hover .label {
+    background-color: #809cc8;
+    color: #ffffff;
+}
+
+.skills #typescript:hover .label {
+    background-color: #007acc;
+    color: #ffffff;
+}
+
+.skills #unity:hover .label {
+    background-color: #ffffff;
+    color: #808182;
+}
+
+.skills #windows:hover .label {
+    background-color: #0178d4;
+    color: #ffffff;
+}
+
+.skills #wordpress:hover .label {
+    background-color: #464646;
+    color: #ffffff;
 }
