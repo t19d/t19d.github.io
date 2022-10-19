@@ -247,6 +247,7 @@ a:hover {
 
 .container-timeline.left-timeline {
     left: 0;
+    text-align: right;
 }
 
 .container-timeline.right-timeline {
