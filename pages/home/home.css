@@ -1,10 +1,73 @@
 :root {
+    /* android */
     --android-background-color: #3dda84;
     --android-text-color: #ffffff;
+    /* angular */
     --angular-background-color: #e23137;
     --angular-text-color: #ffffff;
+    /* boostrap */
     --boostrap-background-color: #60408c;
+    --boostrap-text-color: #ffffff;
+    /* css */
     --css-background-color: #2965f1;
+    --css-text-color: #ffffff;
+    /* docker */
+    --docker-background-color: #def1f9;
+    --docker-text-color: #066da5;
+    /* git */
+    --git-background-color: #f05133;
+    --git-text-color: #ffffff;
+    /* html */
+    --html-background-color: #f16529;
+    --html-text-color: #ffffff;
+    /* ionic */
+    --ionic-background-color: #ffffff;
+    --ionic-text-color: #488bff;
+    /* java */
+    --java-background-color: #ffffff;
+    --java-text-color: #e76f00;
+    /* javascript */
+    --javascript-background-color: #f0db4e;
+    --javascript-text-color: #323230;
+    /* mongodb */
+    --mongodb-background-color: #027f5d;
+    --mongodb-text-color: #cee7a5;
+    /* nodejs */
+    --nodejs-background-color: #90c53f;
+    --nodejs-text-color: #46483d;
+    /* nosql */
+    --nosql-background-color: #ffffff;
+    --nosql-text-color: #2163c6;
+    /* php */
+    --php-background-color: #8993be;
+    --php-text-color: #232531;
+    /* prestashop */
+    --prestashop-background-color: #b0ddec;
+    --prestashop-text-color: #de0067;
+    /* python */
+    --python-background-color: #3879ab;
+    --python-text-color: #ffda5d;
+    /* react */
+    --react-background-color: #001e26;
+    --react-text-color: #00afde;
+    /* sql */
+    --sql-background-color: #1e4056;
+    --sql-text-color: #ffffff;
+    /* svn */
+    --svn-background-color: #809cc8;
+    --svn-text-color: #ffffff;
+    /* typescript */
+    --typescript-background-color: #007acc;
+    --typescript-text-color: #ffffff;
+    /* unity */
+    --unity-background-color: #ffffff;
+    --unity-text-color: #808182;
+    /* windows */
+    --windows-background-color: #0178d4;
+    --windows-text-color: #ffffff;
+    /* wordpress */
+    --wordpress-background-color: #464646;
+    --wordpress-text-color: #ffffff;
 }
 
 body {
@@ -149,170 +212,6 @@ a:hover {
 .about-job .competences li a {
     color: #b2becd;
     text-decoration: none;
-}
-
-
-/* TAGS */
-.about-job .competences li.angular:hover {
-    background-color: var(--angular-background-color);
-    color: #ffffff;
-}
-
-.about-job .competences li.angular:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.css:hover {
-    background-color: var(--css-background-color);
-    color: #ffffff;
-}
-
-.about-job .competences li.css:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.docker:hover {
-    background-color: #def1f9;
-    color: #066da5;
-}
-
-.about-job .competences li.docker:hover a {
-    color: #066da5;
-}
-
-.about-job .competences li.git:hover {
-    background-color: #f05133;
-    color: #ffffff;
-}
-
-.about-job .competences li.git:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.html:hover {
-    background-color: #f16529;
-    color: #ffffff;
-}
-
-.about-job .competences li.html:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.ionic:hover {
-    background-color: #ffffff;
-    color: #488bff;
-}
-
-.about-job .competences li.ionic:hover a {
-    color: #488bff;
-}
-
-.about-job .competences li.java:hover {
-    background-color: #ffffff;
-    color: #e76f00;
-}
-
-.about-job .competences li.java:hover a {
-    color: #e76f00;
-}
-
-.about-job .competences li.javascript:hover {
-    background-color: #f0db4e;
-    color: #323230;
-}
-
-.about-job .competences li.javascript:hover a {
-    color: #323230;
-}
-
-.about-job .competences li.mongodb:hover {
-    background-color: #027f5d;
-    color: #cee7a5;
-}
-
-.about-job .competences li.mongodb:hover a {
-    color: #cee7a5;
-}
-
-.about-job .competences li.nodejs:hover {
-    background-color: #90c53f;
-    color: #46483d;
-}
-
-.about-job .competences li.nodejs:hover a {
-    color: #46483d;
-}
-
-.about-job .competences li.nosql:hover {
-    background-color: #ffffff;
-    color: #2163c6;
-}
-
-.about-job .competences li.nosql:hover a {
-    color: #2163c6;
-}
-
-.about-job .competences li.prestashop:hover {
-    background-color: #b0ddec;
-    color: #de0067;
-}
-
-.about-job .competences li.prestashop:hover a {
-    color: #de0067;
-}
-
-.about-job .competences li.python:hover {
-    background-color: #3879ab;
-    color: #ffda5d;
-}
-
-.about-job .competences li.python:hover a {
-    color: #ffda5d;
-}
-
-.about-job .competences li.sql:hover {
-    background-color: #1e4056;
-    color: #ffffff;
-}
-
-.about-job .competences li.sql:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.svn:hover {
-    background-color: #809cc8;
-    color: #ffffff;
-}
-
-.about-job .competences li.svn:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.typescript:hover {
-    background-color: #007acc;
-    color: #ffffff;
-}
-
-.about-job .competences li.typescript:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.windows:hover {
-    background-color: #0178d4;
-    color: #ffffff;
-}
-
-.about-job .competences li.windows:hover a {
-    color: #ffffff;
-}
-
-.about-job .competences li.wordpress:hover {
-    background-color: #464646;
-    color: #ffffff;
-}
-
-.about-job .competences li.wordpress:hover a {
-    color: #ffffff;
 }
 
 /* EDUACATION / CERTIFICATES => PC */
@@ -571,117 +470,238 @@ a:hover {
     1    pts  => 4%
 */
 
+/************************** TECHNOLOGIES **************************/
+/* android */
 .skills #android:hover .label {
     background-color: var(--android-background-color);
     color: var(--android-text-color);
 }
 
+/* angular */
+.about-job .competences li.angular:hover,
 .skills #angular:hover .label {
     background-color: var(--angular-background-color);
     color: var(--angular-text-color);
 }
 
+.about-job .competences li.angular:hover a {
+    color: var(--angular-text-color);
+}
+
+/* boostrap */
 .skills #bootstrap:hover .label {
     background-color: var(--boostrap-background-color);
-    color: #ffffff;
+    color: var(--boostrap-text-color);
 }
 
+/* css */
+.about-job .competences li.css:hover,
 .skills #css:hover .label {
     background-color: var(--css-background-color);
-    color: #ffffff;
+    color: var(--css-text-color);
 }
 
+.about-job .competences li.css:hover a {
+    color: var(--css-text-color);
+}
+
+/* docker */
+.about-job .competences li.docker:hover,
 .skills #docker:hover .label {
-    background-color: #def1f9;
-    color: #066da5;
+    background-color: var(--docker-background-color);
+    color: var(--docker-text-color);
 }
 
+.about-job .competences li.docker:hover a {
+    color: var(--docker-text-color);
+}
+
+/* git */
+.about-job .competences li.git:hover,
 .skills #git:hover .label {
-    background-color: #f05133;
-    color: #ffffff;
+    background-color: var(--git-background-color);
+    color: var(--git-text-color);
 }
 
+.about-job .competences li.git:hover a {
+    color: var(--git-text-color);
+}
+
+/* html */
+.about-job .competences li.html:hover,
 .skills #html:hover .label {
-    background-color: #f16529;
-    color: #ffffff;
+    background-color: var(--html-background-color);
+    color: var(--html-text-color);
 }
 
+.about-job .competences li.html:hover a {
+    color: var(--html-text-color);
+}
+
+/* ionic */
+.about-job .competences li.ionic:hover,
 .skills #ionic:hover .label {
-    background-color: #ffffff;
-    color: #488bff;
+    background-color: var(--ionic-background-color);
+    color: var(--ionic-text-color);
 }
 
+.about-job .competences li.ionic:hover a {
+    color: var(--ionic-text-color);
+}
+
+/* java */
+.about-job .competences li.java:hover,
 .skills #java:hover .label {
-    background-color: #ffffff;
-    color: #e76f00;
+    background-color: var(--java-background-color);
+    color: var(--java-text-color);
 }
 
+.about-job .competences li.java:hover a {
+    color: var(--java-text-color);
+}
+
+/* javascript */
+.about-job .competences li.javascript:hover,
 .skills #javascript:hover .label {
-    background-color: #f0db4e;
-    color: #323230;
+    background-color: var(--javascript-background-color);
+    color: var(--javascript-text-color);
 }
 
+.about-job .competences li.javascript:hover a {
+    color: var(--javascript-text-color);
+}
+
+/* mongodb */
+.about-job .competences li.mongodb:hover,
 .skills #mongodb:hover .label {
-    background-color: #027f5d;
-    color: #cee7a5;
+    background-color: var(--mongodb-background-color);
+    color: var(--mongodb-text-color);
 }
 
+.about-job .competences li.mongodb:hover a {
+    color: var(--mongodb-text-color);
+}
+
+/* nodejs */
+.about-job .competences li.nodejs:hover,
 .skills #nodejs:hover .label {
-    background-color: #90c53f;
-    color: #46483d;
+    background-color: var(--nodejs-background-color);
+    color: var(--nodejs-text-color);
 }
 
+.about-job .competences li.nodejs:hover a {
+    color: var(--nodejs-text-color);
+}
+
+/* nosql */
+.about-job .competences li.nosql:hover,
 .skills #nosql:hover .label {
-    background-color: #ffffff;
-    color: #2163c6;
+    background-color: var(--nosql-background-color);
+    color: var(--nosql-text-color);
 }
 
+.about-job .competences li.nosql:hover a {
+    color: var(--nosql-text-color);
+}
+
+/* php */
+.about-job .competences li.php:hover,
 .skills #php:hover .label {
-    background-color: #8993be;
-    color: #232531;
+    background-color: var(--php-background-color);
+    color: var(--php-text-color);
 }
 
+.about-job .competences li.php:hover a {
+    color: var(--php-text-color);
+}
+
+/* prestashop */
+.about-job .competences li.prestashop:hover,
 .skills #prestashop:hover .label {
-    background-color: #b0ddec;
-    color: #de0067;
+    background-color: var(--prestashop-background-color);
+    color: var(--prestashop-text-color);
 }
 
+.about-job .competences li.prestashop:hover a {
+    color: var(--prestashop-text-color);
+}
+
+/* python */
+.about-job .competences li.python:hover,
 .skills #python:hover .label {
-    background-color: #3879ab;
-    color: #ffda5d;
+    background-color: var(--python-background-color);
+    color: var(--python-text-color);
 }
 
+.about-job .competences li.python:hover a {
+    color: var(--python-text-color);
+}
+
+/* react */
 .skills #react:hover .label {
-    background-color: #001e26;
-    color: #00afde;
+    background-color: var(--react-background-color);
+    color: var(--react-text-color);
 }
 
+/* sql */
+.about-job .competences li.sql:hover,
 .skills #sql:hover .label {
-    background-color: #1e4056;
-    color: #ffffff;
+    background-color: var(--sql-background-color);
+    color: var(--sql-text-color);
 }
 
+.about-job .competences li.sql:hover a {
+    color: var(--sql-text-color);
+}
+
+/* svn */
+.about-job .competences li.svn:hover,
 .skills #svn:hover .label {
-    background-color: #809cc8;
-    color: #ffffff;
+    background-color: var(--svn-background-color);
+    color: var(--svn-text-color);
 }
 
+.about-job .competences li.svn:hover a {
+    color: var(--svn-text-color);
+}
+
+/* typescript */
+.about-job .competences li.typescript:hover,
 .skills #typescript:hover .label {
-    background-color: #007acc;
-    color: #ffffff;
+    background-color: var(--typescript-background-color);
+    color: var(--typescript-text-color);
 }
 
+.about-job .competences li.typescript:hover a {
+    color: var(--typescript-text-color);
+}
+
+/* unity */
 .skills #unity:hover .label {
-    background-color: #ffffff;
-    color: #808182;
+    background-color: var(--unity-background-color);
+    color: var(--unity-text-color);
 }
 
+/* windows */
+.about-job .competences li.windows:hover,
 .skills #windows:hover .label {
-    background-color: #0178d4;
-    color: #ffffff;
+    background-color: var(--windows-background-color);
+    color: var(--windows-text-color);
 }
 
-.skills #wordpress:hover .label {
-    background-color: #464646;
-    color: #ffffff;
+.about-job .competences li.windows:hover a {
+    color: var(--windows-text-color);
 }
+
+/* wordpress */
+.about-job .competences li.wordpress:hover,
+.skills #wordpress:hover .label {
+    background-color: var(--wordpress-background-color);
+    color: var(--wordpress-text-color);
+}
+
+.about-job .competences li.wordpress:hover a {
+    color: var(--wordpress-text-color);
+}
+
+/******************************************************************/
