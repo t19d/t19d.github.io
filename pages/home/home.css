@@ -274,7 +274,7 @@ a:hover {
 .container-timeline::before {
     content: '';
     position: absolute;
-    width: 5rem;
+    width: 4rem;
     height: var(--width-timeline);
     top: calc(50% - (var(--width-timeline)/2));
     right: calc(var(--width-timeline)*2.5);
@@ -307,19 +307,21 @@ a:hover {
     top: calc(50% - 1.25rem);
     width: 2.5rem;
     height: 2.5rem;
-    background: #007acc;
-    fill: #ffffff;
-    border: var(--width-timeline) solid #007acc;
-    border-radius: 12px;
+    padding: 3px;
+    background: #ffffff;
+    fill: #454e56;
+    border: 1.5px solid #454e56;
+    border-radius: 7px;
     z-index: 1;
+    transition: all 0.3s;
 }
 
 .container-timeline.left-timeline .icon-timeline svg {
-    right: 3.5rem;
+    right: 2.75rem;
 }
 
 .container-timeline.right-timeline .icon-timeline svg {
-    left: 3.5rem;
+    left: 2.75rem;
 }
 
 .container-timeline .content-timeline {
@@ -331,9 +333,14 @@ a:hover {
     transition: all 0.3s;
 }
 
-.container-timeline .content-timeline:hover {
+.container-timeline:hover .content-timeline {
     color: #454e56;
     background: rgba(255, 255, 255, 1);
+}
+
+.container-timeline:hover .icon-timeline svg {
+    box-shadow: 2px -2px 1px rgb(255 0 235), 4px -4px 0px rgb(255 255 55);
+    fill: rgb(255 0 235);
 }
 
 .container-timeline.right-timeline .content-timeline {
@@ -413,14 +420,21 @@ a:hover {
 
     .container-timeline.left-timeline .icon-timeline svg,
     .container-timeline.right-timeline .icon-timeline svg {
-        left: 9rem;
+        /* left: 8.5rem; */
+        display: none;
     }
+
+    /* .container-timeline .icon-timeline svg {
+        border-width: 3px;
+    } */
 
     .container-timeline.left-timeline .content-timeline,
     .container-timeline.right-timeline .content-timeline {
         color: #454e56;
+        text-align: left;
         background: rgba(255, 255, 255, 1);
-        padding: 2.5rem 2.5rem 2.5rem 5rem;
+        /* padding: 2.5rem 2.5rem 2.5rem 4.5rem; */
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
         border-radius: 12px 0 0 12px;
     }
 }
