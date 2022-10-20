@@ -198,7 +198,7 @@ main>h2:hover {
 }
 
 #title-about-me,
-#title-container-cv{
+#title-container-cv {
     background-color: #ffffff;
     color: #454e56;
     width: 100%;
@@ -678,8 +678,14 @@ a:hover {
 }
 
 @media (max-width: 425px) {
+    #about-me .slider .select-slider label svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
     .slider .show-slider .slide-container {
-        aspect-ratio: 3/4;
+        width: 60vw;
+        aspect-ratio: 3/5;
     }
 }
 
