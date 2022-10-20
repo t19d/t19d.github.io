@@ -154,8 +154,29 @@ header>h1 {
     font-weight: 100;
     font-size: 7rem;
     letter-spacing: 3rem;
-    width: 100%;
-    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 1069px) {
+    header>h1 {
+        font-size: 5rem;
+        letter-spacing: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header>h1 {
+        font-size: 4rem;
+        text-shadow: 4px -4px 1px rgb(255 0 235), 8px -8px 0px rgb(255 255 55);
+    }
+}
+
+@media (max-width: 350px) {
+    header>h1 {
+        font-size: 3rem;
+        letter-spacing: 1rem;
+    }
 }
 
 /* MAIN */
@@ -189,17 +210,23 @@ main>h2:hover {
 
 a {
     color: rgba(69, 78, 86);
+    fill: rgba(69, 78, 86);
     transition: all .3s;
 }
 
 a:hover {
     color: rgb(0, 168, 168);
+    fill: rgb(0, 168, 168);
 }
 
 .separator {
     width: 90%;
     height: 1px;
     background-color: rgba(69, 78, 86, 0.5);
+}
+
+main>h2:not(:first-child) {
+    margin-top: 4rem;
 }
 
 
@@ -441,8 +468,145 @@ a:hover {
 
 /*******************************************************************/
 
-/************************** MIS OBJETIVOS **************************/
+/**************************** CONTACTO *****************************/
+#contact {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    color: #454e56;
+}
 
+#contact article {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background: #ffffff;
+    padding: 3.5rem 0;
+    border-radius: 12px;
+    box-shadow: 4px 4px 1px rgb(255 0 235), 8px 8px 0px rgb(255 255 55);
+    transition: all 0.3s;
+}
+
+#contact article:hover {
+    box-shadow: 4px -4px 1px rgb(255 0 235), 8px -8px 0px rgb(255 255 55);
+}
+
+/* IMAGE */
+#contact .round-img-container {
+    background-color: rgb(255 255 55);
+    width: 30%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1.5px solid #454e56;
+    transition: all 0.3s;
+}
+
+#contact article:hover .round-img-container {
+    background-color: rgb(255 0 235);
+}
+
+#contact .round-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+#contact .contact-with-me {
+    padding: 1.5rem;
+}
+
+#contact .contact-with-me>h2 {
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+#contact .contact-email a {
+    font-weight: bolder;
+}
+
+#contact .container-social-networks {
+    display: flex;
+    align-items: center;
+}
+
+#contact .container-social-networks a {
+    width: 3.5rem;
+}
+
+#contact .container-social-networks a:not(:last-child) {
+    margin-right: .5rem;
+}
+
+@media (max-width: 860px) {
+    #contact article {
+        flex-direction: column;
+    }
+
+    #contact .round-img-container {
+        width: 60%;
+    }
+
+    #contact .contact-with-me {
+        text-align: center;
+    }
+
+    #contact .container-social-networks {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #contact {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #contact article {
+        border-radius: 0;
+        margin: 1em 0;
+    }
+}
+
+@media (max-width: 425px) {
+    #contact .container-social-networks a {
+        width: 2.5rem;
+    }
+}
+
+/*******************************************************************/
+
+
+/**************************** SOBRE  MÍ ****************************/
+#about-me * {
+    box-sizing: border-box;
+}
+
+#about-me {
+    display: flex;
+    overflow: scroll;
+    padding: 2rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 2rem;
+    border-radius: 12px;
+    gap: 1rem;
+}
+
+#about-me .item {
+    width: 2rem;
+    flex: 0 0 100%;
+    padding: 2rem;
+    border-radius: 12px;
+    scroll-snap-align: start;
+}
+
+/*******************************************************************/
+
+
+/************************** MIS OBJETIVOS **************************/
 #my-targets {
     width: -moz-fit-content;
     width: fit-content;
@@ -462,10 +626,10 @@ a:hover {
     box-shadow: 4px -4px 1px rgb(255 0 235), 8px -8px 0px rgb(255 255 55);
 }
 
-
 @media (max-width: 600px) {
     #my-targets {
         width: 100%;
+        overflow: hidden;
     }
 
     #my-targets .list-my-targets {
@@ -823,6 +987,20 @@ a:hover {
     border: 1rem solid #b2becd;
     border-radius: 50%;
     position: absolute;
+}
+
+@media (max-width: 768px) and (min-width: 427px) {
+    .skills {
+        --size-chart: 10rem;
+    }
+
+    .skills>article {
+        margin: 1rem;
+    }
+
+    .pie-wrapper .label span {
+        font-size: 1.75rem;
+    }
 }
 
 .pie-wrapper.progress-00 .pie .circle-line {
