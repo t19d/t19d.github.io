@@ -740,20 +740,31 @@ a:hover {
 }
 
 /* Music */
-.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider .background-slide-container {
+.slider .show-slider #slide-2 .background-slide-container {
     background: url(../../assets/img/fondo_musica.png) no-repeat center;
     background-size: cover;
     filter: brightness(.75) blur(.75px);
 }
 
-.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider:hover .background-slide-container {
+.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider:hover #slide-2 .background-slide-container {
+    filter: brightness(1) blur(0);
+}
+
+/* Studies */
+.slider .show-slider #slide-3 .background-slide-container {
+    background: url(../../assets/img/fondo_lofi.png) no-repeat center;
+    background-size: cover;
+    filter: brightness(.75) blur(.75px);
+}
+
+.slider:has(.select-slider input[type="radio"][value="slide-3"]:checked) .show-slider:hover #slide-3 .background-slide-container {
     filter: brightness(1) blur(0);
 }
 
 .slider .show-slider .slide-container p {
     z-index: 1;
     max-width: 80%;
-    background: #ffffff;
+    background: rgb(255 255 255 / 90%);
     color: #454e56;
     padding: 1rem;
     border-radius: 7px;
@@ -762,6 +773,7 @@ a:hover {
 }
 
 .slider .show-slider .slide-container:hover p {
+    background: rgb(255 255 255 / 100%);
     box-shadow: 4px 4px 1px rgb(255 0 235), 8px 8px 0px rgb(255 255 55);
 }
 
