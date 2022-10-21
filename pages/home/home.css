@@ -636,6 +636,13 @@ a:hover {
     fill: rgb(255 0 235);
 }
 
+.slider .select-slider input[type="radio"][value="slide-1"]:not(:checked)~label[for="input-slide-1"],
+.slider .select-slider input[type="radio"][value="slide-2"]:not(:checked)~label[for="input-slide-2"],
+.slider .select-slider input[type="radio"][value="slide-3"]:not(:checked)~label[for="input-slide-3"],
+.slider .select-slider input[type="radio"][value="slide-4"]:not(:checked)~label[for="input-slide-4"] {
+    fill: rgba(69, 78, 86, 0.5);
+}
+
 #about-me .slider .select-slider label:not(:last-child) {
     border-right: 1px solid;
 }
@@ -646,7 +653,7 @@ a:hover {
 }
 
 /* Hide all containers */
-.slider .show-slider .slide-container {
+.slider .show-slider {
     width: 80vw;
     max-width: var(--max-width-pc);
     aspect-ratio: 19/10;
@@ -655,7 +662,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin: 2rem 0;
-    padding: 2rem;
     border-radius: 8px;
     opacity: 1;
     text-align: center;
@@ -663,7 +669,20 @@ a:hover {
     transition: all 0.3s;
 }
 
-/* Show container by value */
+
+.slider .show-slider .slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide all containers */
 .slider:has(.select-slider input[type="radio"][value="slide-1"]:checked) .show-slider .slide-container:not(#slide-1),
 .slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider .slide-container:not(#slide-2),
 .slider:has(.select-slider input[type="radio"][value="slide-3"]:checked) .show-slider .slide-container:not(#slide-3),
@@ -672,17 +691,26 @@ a:hover {
 }
 
 /* Music */
-.slider .show-slider .slide-container#slide-2 {
-    background: url(../../assets/img/fondo_musica_blur.png) no-repeat center;
-    background-size: cover;
-}
-
-.slider .show-slider .slide-container#slide-2:hover {
+.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider .background-slide-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: url(../../assets/img/fondo_musica.png) no-repeat center;
     background-size: cover;
+    border-radius: 8px;
+    filter: brightness(.75) blur(.75px);
+    transition: all 0.3s;
+}
+
+.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider:hover .background-slide-container{
+    filter: brightness(1) blur(0);
 }
 
 .slider .show-slider .slide-container p {
+    z-index: 1;
+    max-width: 80%;
     background: #ffffff;
     color: #454e56;
     padding: 1rem;
@@ -697,7 +725,7 @@ a:hover {
 
 
 @media (max-width: 768px) {
-    .slider .show-slider .slide-container {
+    .slider .show-slider {
         aspect-ratio: 19/12;
     }
 }
@@ -708,8 +736,8 @@ a:hover {
         height: 2rem;
     }
 
-    .slider .show-slider .slide-container {
-        width: 60vw;
+    .slider .show-slider {
+        width: 75vw;
         aspect-ratio: 3/5;
     }
 }
