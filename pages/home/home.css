@@ -761,6 +761,17 @@ a:hover {
     filter: brightness(1) blur(0);
 }
 
+/* Videogames */
+.slider .show-slider #slide-4 .background-slide-container {
+    background: url(../../assets/img/fondo-videojuegos.jpg) no-repeat center;
+    background-size: cover;
+    filter: brightness(.75) blur(.75px);
+}
+
+.slider:has(.select-slider input[type="radio"][value="slide-4"]:checked) .show-slider:hover #slide-4 .background-slide-container {
+    filter: brightness(1) blur(0);
+}
+
 .slider .show-slider .slide-container p {
     z-index: 1;
     max-width: 80%;
