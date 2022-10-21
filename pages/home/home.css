@@ -628,7 +628,6 @@ a:hover {
 
 #about-me .slider .select-slider label {
     padding: .5rem 1rem;
-    cursor: pointer;
     transition: all 0.3s;
 }
 
@@ -690,21 +689,64 @@ a:hover {
     display: none;
 }
 
-/* Music */
-.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider .background-slide-container{
+.slider .show-slider .background-slide-container {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(../../assets/img/fondo_musica.png) no-repeat center;
-    background-size: cover;
     border-radius: 8px;
-    filter: brightness(.75) blur(.75px);
     transition: all 0.3s;
 }
 
-.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider:hover .background-slide-container{
+/* Rain */
+.slider:has(.select-slider input[type="radio"][value="slide-1"]:checked) .show-slider .background-slide-container {
+    background: linear-gradient(0deg, #181e2c, #242d40);
+}
+
+.slider:has(.select-slider input[type="radio"][value="slide-1"]:checked) .show-slider .background-slide-container .rain-drop {
+    background: white;
+    position: absolute;
+    width: .5px;
+    height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    animation: drop .5s linear infinite;
+}
+
+@keyframes drop {
+    0% {
+        /* transform: translateY(0); */
+        top: 0;
+        bottom: 100%;
+        opacity: 1;
+    }
+
+    75% {
+        /* transform: translateY(90vh); */
+        top: 90%;
+        bottom: 10%;
+        opacity: .25;
+    }
+
+    100% {
+        /* transform: translateY(90vh); */
+        top: 100%;
+    }
+}
+
+.slider:has(.select-slider input[type="radio"][value="slide-1"]:checked) .show-slider:hover .background-slide-container {
+    /* background: linear-gradient(30deg, #181e2c, #242d40); */
+}
+
+/* Music */
+.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider .background-slide-container {
+    background: url(../../assets/img/fondo_musica.png) no-repeat center;
+    background-size: cover;
+    filter: brightness(.75) blur(.75px);
+}
+
+.slider:has(.select-slider input[type="radio"][value="slide-2"]:checked) .show-slider:hover .background-slide-container {
     filter: brightness(1) blur(0);
 }
 
