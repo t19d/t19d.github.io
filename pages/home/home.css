@@ -1016,25 +1016,19 @@ a:hover {
 
 /* EDUACATION / CERTIFICATES => PC */
 #education-certificates-pc {
-    display: flex;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
     border-top: 2px solid rgba(69, 78, 86, 0.5);
     border-bottom: 2px solid rgba(69, 78, 86, 0.5);
-}
-
-#education-certificates-pc>section {
-    width: 50%;
 }
 
 /* EDUCATION & CERTIFICATES */
 .education,
 .certificates {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto 1fr auto 1fr;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
@@ -1068,8 +1062,7 @@ a:hover {
     }
 
     #education-certificates-pc {
-        flex-direction: column;
-        width: 100%;
+        grid-template-columns: auto;
     }
 
     #education-certificates-pc>section {
