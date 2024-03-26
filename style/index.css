@@ -89,10 +89,12 @@ html {
 					align-items: center;
 
 					img {
+						z-index: -1;
 						max-width: 500px;
 						object-fit: contain;
 						width: 100%;
 						aspect-ratio: 222/257;
+						mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 					}
 
 					h1 {
