@@ -1,0 +1,53 @@
+/* ALL */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	min-width: 0;
+}
+
+* {
+	margin: 0;
+	text-decoration: none;
+}
+
+/* BUTTONS */
+button {
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	text-align: inherit;
+	background: none;
+	box-shadow: none;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	color: inherit;
+	font: inherit;
+}
+
+/* LISTS */
+ol,
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* LINKS */
+a {
+	display: flex;
+}
+
+/* TEXTS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}

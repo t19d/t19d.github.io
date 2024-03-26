@@ -1,0 +1,22 @@
+a {
+	position: relative;
+	color: var(--text_color_white);
+
+	:not(.button) {
+		&::after {
+			position: absolute;
+			content: "";
+			background-color: var(--text_color_white);
+			top: 100%;
+			left: 0;
+			width: 0;
+			height: 1px;
+			transition: width 0.3s;
+		}
+
+		&:focus::after,
+		&:hover::after {
+			width: 100%;
+		}
+	}
+}
