@@ -2,7 +2,7 @@ a {
 	position: relative;
 	color: var(--text_color_white);
 
-	:not(.button) {
+	&:not(.btn) {
 		&::after {
 			position: absolute;
 			content: "";
