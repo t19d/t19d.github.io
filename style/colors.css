@@ -8,6 +8,7 @@
 	--primary_color-dark-2: #5906a5;
 
 	/* SECONDARY 1 */
+	--secondary_color_1-light-2_20: #f174d233;
 	--secondary_color_1-light-2: #f174d2;
 	--secondary_color_1-light-1: #ec46c3;
 	--secondary_color_1: #e81eb5;
@@ -23,6 +24,7 @@
 	--secondary_color_2-dark-2: #1f0caa;
 
 	/* COMPLEMENTARY */
+	--complementary_color-light-2_30: #fff87b4d;
 	--complementary_color-light-2: #fff87b;
 	--complementary_color-light-1: #fff64c;
 	--complementary_color: #fff421;
@@ -33,4 +35,7 @@
 	--text_color_white: #ffffff;
 	--text_color_dark: #333333;
 	--text_color_light: #a9a3a3;
+
+	/* BACKGROUND */
+	--background_color_white: #ffffff;
 }
