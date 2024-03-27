@@ -1,13 +1,11 @@
-// Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
-	// Función para ajustar la altura del .background-gradient
 	function adjustBackgroundHeight() {
 		// Obtener la altura del encabezado y el pie de página
-		var headerHeight = document.querySelector("body > header").offsetHeight;
-		var backgroundGradient = document.querySelector(".background-gradient");
+		let headerHeight = document.querySelector("body > header").offsetHeight;
+		let backgroundGradient = document.querySelector(".background-gradient");
 
 		// Calcular la altura deseada para el .background-gradient
-		var desiredHeight = window.innerHeight - headerHeight;
+		let desiredHeight = window.innerHeight - headerHeight;
 
 		// Establecer la altura y el top del .background-gradient
 		backgroundGradient.style.height = desiredHeight + "px";

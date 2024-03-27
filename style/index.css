@@ -30,6 +30,11 @@ html {
 			position: sticky;
 			top: 0;
 			background-color: var(--primary_color-dark-2);
+			transition: box-shadow 0.5s;
+
+			&.scrolled {
+				box-shadow: 0 1px 1px var(--primary_color-light-2); /* Agregar sombra al menú */
+			}
 
 			> .max-width {
 				display: grid;
