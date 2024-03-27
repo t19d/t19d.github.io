@@ -79,6 +79,15 @@ html {
 				);
 			}
 
+			h2.title-section {
+				font-size: 4rem;
+				font-style: italic;
+				font-variation-settings: "wght" 800, "wdth" 62.5;
+				letter-spacing: 5px;
+				text-transform: lowercase;
+				text-shadow: 0 0 4px var(--text_color_white);
+			}
+
 			#top {
 				display: flex;
 				flex-direction: column;
@@ -106,9 +115,8 @@ html {
 					h1 {
 						font-size: 7.5rem;
 						line-height: 7.5rem;
-						font-weight: 550;
 						font-style: italic;
-						font-variation-settings: "wdth" 62.5;
+						font-variation-settings: "wght" 550, "wdth" 62.5;
 						letter-spacing: 20px;
 						text-transform: uppercase;
 						text-shadow: 0 0 4px var(--text_color_white);
@@ -128,6 +136,83 @@ html {
 					a img {
 						width: 2rem;
 						aspect-ratio: 1/1;
+					}
+				}
+			}
+
+			#experience {
+				display: flex;
+				flex-direction: column;
+				gap: 50px;
+
+				article {
+					display: grid;
+					grid-template-columns: auto 1fr;
+					gap: 2.5rem;
+					background-color: var(--secondary_color_2-light-2_30);
+					padding: 2.5rem;
+					border-radius: 24px;
+					box-shadow: 0 0 3px var(--secondary_color_2-light-2);
+
+					.company {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						gap: 0.5rem;
+						max-width: 150px;
+
+						img {
+							max-width: 100%;
+							aspect-ratio: 1/1;
+							box-shadow: 0 0 2px var(--text_color_white);
+						}
+
+						h3 {
+							max-width: 100%;
+							font-weight: 300;
+							letter-spacing: 5px;
+							text-align: center;
+							hyphens: manual;
+						}
+					}
+
+					.details {
+						.top {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							gap: 1rem;
+
+							h3 {
+								font-size: 1.75rem;
+								font-weight: 600;
+							}
+
+							span {
+								letter-spacing: 5px;
+								font-weight: 250;
+							}
+						}
+
+						ul {
+							display: flex;
+							flex-direction: column;
+							gap: 0.5rem;
+							padding-top: 0.75rem;
+
+							li {
+								font-size: 1rem;
+								text-wrap: balance;
+								text-wrap: pretty;
+
+								&::before {
+									content: "\2713";
+									padding-right: 0.25rem;
+									font-weight: bold;
+									color: var(--secondary_color_2-light-2);
+								}
+							}
+						}
 					}
 				}
 			}
