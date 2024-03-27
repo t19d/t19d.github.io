@@ -230,6 +230,7 @@ html {
 
 				article {
 					display: flex;
+					align-items: center;
 					gap: 25px;
 
 					.image {
