@@ -10,6 +10,8 @@
 html {
 	font-family: "NotoSans", "Gill Sans", "Gill Sans MT", Calibri,
 		"Trebuchet MS", sans-serif;
+	scroll-behavior: smooth;
+	scroll-padding-top: 90px;
 
 	body {
 		margin: 0;
@@ -64,7 +66,6 @@ html {
 
 		main {
 			position: relative;
-			padding-block: 5dvh;
 
 			.background-gradient {
 				z-index: -2;
@@ -93,6 +94,7 @@ html {
 				flex-direction: column;
 				align-items: center;
 				gap: 30px;
+				padding-block: 5dvh;
 
 				.me-title {
 					display: flex;
