@@ -234,8 +234,6 @@ html {
 
 					.image {
 						width: 100%;
-						shape-outside: circle(50%);
-						width: 100%;
 
 						img {
 							max-width: 100%;
