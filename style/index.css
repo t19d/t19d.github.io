@@ -12,6 +12,10 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 90px;
 
+	::selection {
+		background-color: var(--secondary_color_1-light-1);
+	}
+
 	body {
 		margin: 0;
 		min-height: 100dvh;
