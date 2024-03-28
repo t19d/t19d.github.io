@@ -111,6 +111,10 @@ html {
 				-webkit-user-select: none;
 				-moz-user-select: none;
 				user-select: none;
+
+				@media (max-width: 425px) {
+					font-size: 3rem;
+				}
 			}
 
 			.max-width {
@@ -148,11 +152,33 @@ html {
 							text-transform: uppercase;
 							text-shadow: 0 0 4px var(--text_color_white);
 							margin-top: -4rem;
+							text-align: center;
+
+							@media (max-width: 425px) {
+								font-size: 6.5rem;
+								line-height: 6.5rem;
+								margin-top: -3rem;
+							}
+
+							@media (max-width: 375px) {
+								font-size: 5.5rem;
+								line-height: 5.5rem;
+								margin-top: -3rem;
+							}
 						}
 
 						h2 {
 							font-size: 2.5rem;
 							font-weight: 500;
+							text-align: center;
+
+							@media (max-width: 1024px) {
+								margin-top: 1rem;
+							}
+
+							@media (max-width: 425px) {
+								font-size: 1.75rem;
+							}
 						}
 					}
 
@@ -181,6 +207,12 @@ html {
 						border-radius: 24px;
 						box-shadow: 0 0 3px var(--secondary_color_2-light-2);
 
+						@media (max-width: 768px) {
+							grid-template-columns: 1fr;
+							justify-items: center;
+							gap: 1.5rem;
+						}
+
 						.company {
 							display: flex;
 							flex-direction: column;
@@ -202,6 +234,14 @@ html {
 								text-align: center;
 								hyphens: manual;
 							}
+
+							@media (max-width: 768px) {
+								max-width: 100%;
+
+								img {
+									max-width: 150px;
+								}
+							}
 						}
 
 						.details {
@@ -211,6 +251,12 @@ html {
 								align-items: center;
 								gap: 1rem;
 
+								@media (max-width: 1024px) {
+									flex-direction: column;
+									align-items: flex-start;
+									gap: 0.25rem;
+								}
+
 								h3 {
 									font-size: 1.75rem;
 									font-weight: 600;
@@ -219,6 +265,10 @@ html {
 								span {
 									letter-spacing: 5px;
 									font-weight: 250;
+
+									@media (min-width: 769px) {
+										text-align: end;
+									}
 								}
 							}
 
@@ -254,6 +304,10 @@ html {
 						grid-template-columns: repeat(2, 1fr);
 						gap: 50px;
 
+						@media (max-width: 768px) {
+							grid-template-columns: 1fr;
+						}
+
 						.card {
 							display: flex;
 							flex-direction: column;
@@ -263,8 +317,10 @@ html {
 							border-radius: 24px;
 							box-shadow: 0 0 3px var(--secondary_color_1-light-2);
 
-							&:last-child {
-								grid-column: 1 / 3;
+							@media (min-width: 769px) {
+								&:last-child {
+									grid-column: 1 / 3;
+								}
 							}
 
 							h3 {
@@ -329,13 +385,24 @@ html {
 						align-items: center;
 						gap: 25px;
 
+						@media (max-width: 1024px) {
+							grid-template-columns: 1fr;
+						}
+
 						.image {
+							display: flex;
+							justify-content: center;
+							align-items: center;
 							width: 100%;
 
 							img {
-								max-width: 100%;
+								max-width: 400px;
 								border-radius: 50%;
 								box-shadow: 0 0 2px var(--text_color_white);
+
+								@media (max-width: 768px) {
+									width: 75%;
+								}
 							}
 						}
 
