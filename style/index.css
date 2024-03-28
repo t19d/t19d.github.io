@@ -250,7 +250,6 @@ html {
 								letter-spacing: 5px;
 								text-align: center;
 								text-transform: uppercase;
-								text-shadow: 0 0 4px var(--text_color_white);
 								text-shadow: 0 0 4px var(--secondary_color_1-light-2);
 							}
 
@@ -258,9 +257,10 @@ html {
 								display: flex;
 								flex-wrap: wrap;
 								justify-content: center;
-								gap: 25px;
+								gap: 2rem;
 
 								li {
+									position: relative;
 									display: flex;
 									align-items: center;
 									justify-content: center;
@@ -273,6 +273,21 @@ html {
 									img {
 										max-width: 75%;
 										object-fit: scale-down;
+									}
+
+									&:hover .tooltip{
+										visibility: visible;
+										opacity: 1;
+										transition: all .5s;
+									}
+
+									.tooltip {
+										position: absolute;
+										bottom: 100%;
+										visibility: hidden;
+										opacity: 0;
+										transition: visibility .5s, opacity .3s;
+										line-height: 2rem;
 									}
 								}
 							}
