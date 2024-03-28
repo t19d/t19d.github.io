@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-	let menu = document.querySelector("body > header.menu");
+	const menu = document.querySelector("body > header.menu");
 
 	function toggleMenuShadow() {
 		// Comprobar si menu tiene la clase scrolled
-		let hasScrolled = menu.classList.contains("scrolled");
+		const hasScrolled = menu.classList.contains("scrolled");
 
 		if (window.scrollY > 5) {
 			if (!hasScrolled) menu.classList.add("scrolled");
