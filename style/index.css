@@ -18,6 +18,21 @@ html {
 		background-color: var(--primary_color-dark-2);
 		color: var(--text_color_white);
 
+		img {
+			pointer-events: none;
+			-ms-user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		.no-text-select {
+			-ms-user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
 		.max-width {
 			max-width: 1280px;
 			padding-inline: var(--page-space);
@@ -88,6 +103,10 @@ html {
 				letter-spacing: 5px;
 				text-transform: lowercase;
 				text-shadow: 0 0 4px var(--text_color_white);
+				-ms-user-select: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
 			}
 
 			.max-width {
@@ -275,10 +294,10 @@ html {
 										object-fit: scale-down;
 									}
 
-									&:hover .tooltip{
+									&:hover .tooltip {
 										visibility: visible;
 										opacity: 1;
-										transition: all .5s;
+										transition: all 0.5s;
 									}
 
 									.tooltip {
@@ -286,7 +305,7 @@ html {
 										bottom: 100%;
 										visibility: hidden;
 										opacity: 0;
-										transition: visibility .5s, opacity .3s;
+										transition: visibility 0.5s, opacity 0.3s;
 										line-height: 2rem;
 									}
 								}
