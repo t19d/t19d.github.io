@@ -14,11 +14,24 @@
 	<body>
 		<header class="menu no-text-select">
 			<div class="max-width">
-				<a class="logo" href="#top">
-					<img src="assets/img/logo.webp" alt="Logotipo" />
-				</a>
+				<nav class="mobile">
+					<a class="logo" href="#top">
+						<img src="assets/img/logo.webp" alt="Logotipo" />
+					</a>
 
-				<nav>
+					<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+					<label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle Menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</label>
+				</nav>
+
+				<nav class="map">
+					<a class="logo" href="#top">
+						<img src="assets/img/logo.webp" alt="Logotipo" />
+					</a>
+
 					<ul>
 						<li><a href="#experience">experiencia</a></li>
 						<!-- <li><a href="#projects">proyectos</a></li> -->
@@ -26,9 +39,9 @@
 						<li><a href="#me">sobre mí</a></li>
 						<li><a href="#contact">contacto</a></li>
 					</ul>
-				</nav>
 
-				<button class="btn download-cv">descargar CV</button>
+					<button class="btn download-cv">descargar CV</button>
+				</nav>
 			</div>
 		</header>
 
@@ -444,6 +457,7 @@
 		<footer></footer>
 		<script src="js/background-gradient.js"></script>
 		<script src="js/menu-scroll-effect.js"></script>
+		<script src="js/close-menu.js"></script>
 		<script src="js/download-cv.js"></script>
 	</body>
 </html>
