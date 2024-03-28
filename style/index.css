@@ -47,7 +47,7 @@ html {
 			z-index: 1;
 			position: sticky;
 			top: 0;
-			background-color: var(--primary_color-dark-2);
+			background-color: var(--primary_color-dark-2_95);
 			transition: box-shadow 0.5s;
 
 			&.scrolled {
@@ -378,6 +378,7 @@ html {
 					display: flex;
 					flex-direction: column;
 					gap: 2.5dvh;
+					padding-bottom: 5dvh;
 
 					article {
 						display: grid;
