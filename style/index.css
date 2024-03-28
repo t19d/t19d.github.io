@@ -324,7 +324,8 @@ html {
 					gap: 2.5dvh;
 
 					article {
-						display: flex;
+						display: grid;
+						grid-template-columns: 1fr 2fr;
 						align-items: center;
 						gap: 25px;
 
