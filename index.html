@@ -1,60 +1,503 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Esta es la página de inicio de David Tojo de 'github.io'. Contiene enlaces a su GitHub y LinkedIn. Además, existe un acceso para ver más detalles sobre su perfil."
-        />
-        <title>David Tojo</title>
-        <link rel="icon" type="image/png" href="./assets/icons/favicon.png" sizes="64x64" />
-        <link rel="stylesheet" href="style/index.css" />
-    </head>
-    <body>
-        <div id="container-first-page">
-            <div id="container-elements">
-                <div class="round-img-container">
-                    <img src="./assets/img/img_portfolio.png" alt="David Tojo" />
-                </div>
-                <div class="right-part">
-                    <h1>David Tojo</h1>
-                    <a class="see-more" href="pages/home/home.html">
-                        <span>Ver más</span>
-                    </a>
-                    <ul>
-                        <li>
-                            <a
-                                href="https://www.linkedin.com/in/david-tojo-yebra-581533176/"
-                                target="_blank"
-                                rel="noopener"
-                                title="Perfil de LinkedIn de David Tojo"
-                            >
-                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>LinkedIn</title>
-                                    <path
-                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                                    />
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/t19d" target="_blank" rel="noopener" title="Perfil de GitHub de David Tojo">
-                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>GitHub</title>
-                                    <path
-                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                                    />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <a class="see-more" href="pages/angular-tactica-board/index.html">
-                        <span>Tactical Board</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Portfolio de David Tojo." />
+		<title>David Tojo</title>
+		<link rel="icon" type="image/png" href="assets/img/me.png" sizes="64x64" />
+		<link rel="stylesheet" href="style/resets.css" />
+		<link rel="stylesheet" href="style/index.css" />
+	</head>
+
+	<body>
+		<header class="menu no-text-select">
+			<div class="max-width">
+				<nav class="mobile">
+					<a class="logo" href="#top">
+						<img src="assets/img/logo.webp" alt="Logotipo" />
+					</a>
+
+					<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+					<label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle Menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</label>
+				</nav>
+
+				<nav class="map">
+					<a class="logo" href="#top">
+						<img src="assets/img/logo.webp" alt="Logotipo" />
+					</a>
+
+					<ul>
+						<li><a href="#experience">experiencia</a></li>
+						<!-- <li><a href="#projects">proyectos</a></li> -->
+						<li><a href="#skills">habilidades</a></li>
+						<li><a href="#me">sobre mí</a></li>
+						<li><a href="#contact">contacto</a></li>
+					</ul>
+
+					<button class="btn download-cv">descargar CV</button>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<div class="background-gradient"></div>
+			<div class="max-width">
+				<section id="top" class="no-text-select">
+					<article class="me-title">
+						<img src="assets/img/me.png" alt="David Tojo" />
+						<h1>David Tojo</h1>
+						<h2>desarrollador fullstack</h2>
+					</article>
+					<article class="links">
+						<a
+							href="https://www.linkedin.com/in/david-tojo-yebra-581533176/"
+							target="_blank"
+							rel="noopener"
+							title="Perfil de LinkedIn de David Tojo"
+							class="btn all-round"
+						>
+							<img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+						</a>
+						<a href="https://github.com/t19d" target="_blank" rel="noopener" title="Perfil de GitHub de David Tojo" class="btn all-round">
+							<img src="assets/icons/github.svg" alt="GitHub" />
+						</a>
+					</article>
+				</section>
+
+				<section id="experience">
+					<header>
+						<h2 class="title-section">Experiencia</h2>
+					</header>
+
+					<article class="card">
+						<div class="company">
+							<img src="assets/img/companies/cargoffer.jpeg" alt="Cargoffer" />
+							<h3>Cargo&shy;ffer</h3>
+						</div>
+
+						<div class="details">
+							<div class="top">
+								<h3>Programador FullStack</h3>
+								<span>2023-04-28 | Actualidad</span>
+							</div>
+
+							<ul>
+								<li>Desarrollo e implementación con Angular e Ionic utilizando TypeScript para crear un front optimizado y dinámico. 💻🎨</li>
+								<li>Uso del framework Express.js con JavaScript para construir un back sólido y adaptable. 🌐🔧</li>
+								<li>Desarrollo con Flask en Python, aprovechando su flexibilidad y facilidad de uso. 🐍🌐</li>
+								<li>Experiencia en el uso de Next.js con React para crear aplicaciones web modernas y dinámicas. ⚛️🌐</li>
+								<li>Gestión eficiente de datos utilizando MongoDB, garantizando un almacenamiento y recuperación de datos óptimos. 📊💾</li>
+								<li>
+									Colaboración efectiva con GIT para el control de versiones, facilitando la colaboración en equipo y la gestión del código
+									fuente. 🤝🔗
+								</li>
+								<li>Dominio de herramientas e2e como Playwright y Puppeteer. 🛠️🤖</li>
+								<li>
+									Optimización de procesos de datos y consultas en MongoDB para mejorar el rendimiento y la eficiencia de las aplicaciones.
+									🚀🔍
+								</li>
+								<li>Implementación de la plataforma de pago de Stripe para transacciones seguras y eficaces. 💵🫰</li>
+								<li>Diseño de interfaces utilizando Figma. 🎨</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="company">
+							<img src="assets/img/companies/minsait.jpeg" alt="Minsait" />
+							<h3>Min&shy;sait</h3>
+						</div>
+
+						<div class="details">
+							<div class="top">
+								<h3>Técnico de software</h3>
+								<span>2021-06-01 | 2022-10-14</span>
+							</div>
+
+							<ul>
+								<li>Implementación y desarrollo utilizando los frameworks de Angular e Ionic con TypeScript. 🖥️</li>
+								<li>Creación, modificación y despliegue de contenedores e imágenes de Docker para facilitar la infraestructura. 🐳</li>
+								<li>Uso efectivo del Spring Framework para la gestión y optimización de procesos. 🌱</li>
+								<li>
+									Manipulación y mejora de asistentes de inteligencia artificial (IA) y chatbots contextuales en texto y voz (RASA) utilizando
+									Python. 🤖
+								</li>
+								<li>
+									Adaptación y actualización de código para garantizar la compatibilidad con diferentes navegadores, desde Internet Explorer
+									hasta Edge. 🌐
+								</li>
+								<li>Trabajo con bases de datos tanto SQL como NoSQL para el almacenamiento y gestión eficiente de datos. 🛢️</li>
+								<li>
+									Utilización de sistemas de control de versiones SVN y GIT para garantizar la colaboración efectiva y la gestión del código
+									fuente. 🔄
+								</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="company">
+							<img src="assets/img/companies/dominiozero.jpeg" alt="DominioZero" />
+							<h3>Dominio&shy;Zero</h3>
+						</div>
+
+						<div class="details">
+							<div class="top">
+								<h3>Prácticas</h3>
+								<span>2021-01-17 | 2021-03-25</span>
+							</div>
+
+							<ul>
+								<li>Desarrollo de módulos en Prestashop. 💼</li>
+								<li>Creación de sitios web en Wordpress utilizando PHP, HTML, CSS y JavaScript. 🌐</li>
+								<li>
+									Utilización de diversos plugins de Wordpress, como WPBakery, Slider Revolution, WooCommerce, Justified Image Grid, entre
+									otros. 🛠️
+								</li>
+								<li>Optimización de páginas web para mejorar la experiencia del usuario y el rendimiento. 🚀</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="company">
+							<img src="assets/img/companies/maslenovo.jpeg" alt="MasLenovo" />
+							<h3>Mas&shy;Lenovo</h3>
+						</div>
+
+						<div class="details">
+							<div class="top">
+								<h3>Sistemas y reparación de hardware</h3>
+								<span>2020-09-27 | 2020-11-05</span>
+							</div>
+
+							<ul>
+								<li>Montaje y mantenimiento de sistemas y componentes informáticos. 💻</li>
+								<li>
+									Instalación y mantenimiento de sistemas operativos, tanto individuales como masivos, incluyendo maquetación e instalación de
+									software ofimático. 🛠️
+								</li>
+								<li>Reparación de ordenadores portátiles, de sobremesa y dispositivos móviles. 📱</li>
+								<li>Mantenimiento y edición de plugins de WordPress para la optimización de sitios web. 🌐</li>
+								<li>Creación de mockups para el diseño de páginas web. 🎨</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="company">
+							<img src="assets/img/companies/nortempo.jpeg" alt="Nortempo" />
+							<h3>Nor&shy;tempo</h3>
+						</div>
+
+						<div class="details">
+							<div class="top">
+								<h3>Becario de Sistemas</h3>
+								<span>2019-09-09 | 2019-12-08</span>
+							</div>
+
+							<ul>
+								<li>Montaje y mantenimiento de sistemas y componentes informáticos. 💻</li>
+								<li>Instalación y mantenimiento de sistemas operativos, tanto individuales como masivos, incluyendo maquetación. 🛠️</li>
+								<li>Instalación y mantenimiento de redes para la transmisión de datos. 🌐</li>
+								<li>Acceso y explotación de bases de datos relacionales. 📊</li>
+								<li>Acceso y mantenimiento de entornos en la nube (servidores de nube) así como herramientas en la nube (Office 365...). ☁️</li>
+								<li>Acceso y administración de Active Directory (creación de usuarios de dominio, mantenimiento...). 👥</li>
+								<li>Gestión de incidencias y documentación. 📝</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="card">
+						<div class="company">
+							<img src="assets/img/companies/futuro_digitale.jpeg" alt="FuturoDigitale" />
+							<h3>Futuro Digitale</h3>
+						</div>
+
+						<div class="details">
+							<div class="top">
+								<h3>Prácticas</h3>
+								<span>2019-03-30 | 2019-06-14</span>
+							</div>
+
+							<ul>
+								<li>Mantenimiento de una página web y su base de datos. 🖥️</li>
+								<li>Creación de software para diversos fines. 💻</li>
+								<li>Manejo de Google Sites para la gestión de contenido web. 🌐</li>
+								<li>Comunicación en inglés con colegas de la empresa para colaboraciones y proyectos. 🌍</li>
+							</ul>
+						</div>
+					</article>
+				</section>
+
+				<!-- <section id="projects">
+					<header>
+						<h2 class="title-section">Proyectos</h2>
+					</header>
+				</section> -->
+
+				<section id="skills">
+					<header>
+						<h2 class="title-section">Habilidades</h2>
+					</header>
+
+					<div class="technologies">
+						<article class="card">
+							<h3 class="no-text-select">Frontend</h3>
+
+							<ul>
+								<li>
+									<img src="assets/icons/angular.svg" alt="Angular" />
+									<span class="tooltip">Angular</span>
+								</li>
+								<li>
+									<img src="assets/icons/astro.svg" alt="Astro" />
+									<span class="tooltip">Astro</span>
+								</li>
+								<li>
+									<img src="assets/icons/css-3.svg" alt="CSS" />
+									<span class="tooltip">CSS</span>
+								</li>
+								<li>
+									<img src="assets/icons/html-5.svg" alt="HTML5" />
+									<span class="tooltip">HTML5</span>
+								</li>
+								<li>
+									<img src="assets/icons/ionic.svg" alt="Ionic" />
+									<span class="tooltip">Ionic</span>
+								</li>
+								<li>
+									<img src="assets/icons/js.svg" alt="JavaScript" />
+									<span class="tooltip">JavaScript</span>
+								</li>
+								<li><img src="assets/icons/next.svg" alt="Next.js" /><span class="tooltip">Next.js</span></li>
+								<li>
+									<img src="assets/icons/react.svg" alt="React" />
+									<span class="tooltip">React</span>
+								</li>
+								<li>
+									<img src="assets/icons/sass.svg" alt="Sass" />
+									<span class="tooltip">Sass</span>
+								</li>
+								<li>
+									<img src="assets/icons/typescript.svg" alt="TypeScript" />
+									<span class="tooltip">TypeScript</span>
+								</li>
+							</ul>
+						</article>
+
+						<article class="card">
+							<h3 class="no-text-select">Backend</h3>
+
+							<ul>
+								<li>
+									<img src="assets/icons/express.svg" alt="Express.js" />
+									<span class="tooltip">Express.js</span>
+								</li>
+								<li>
+									<img src="assets/icons/flask.svg" alt="Flask" />
+									<span class="tooltip">Flask</span>
+								</li>
+								<li>
+									<img src="assets/icons/java.svg" alt="Java" />
+									<span class="tooltip">Java</span>
+								</li>
+								<li>
+									<img src="assets/icons/node.svg" alt="Node.js" />
+									<span class="tooltip">Node.js</span>
+								</li>
+								<li>
+									<img src="assets/icons/php.svg" alt="PHP" />
+									<span class="tooltip">PHP</span>
+								</li>
+								<li>
+									<img src="assets/icons/python.svg" alt="Python" />
+									<span class="tooltip">Python</span>
+								</li>
+								<li>
+									<img src="assets/icons/spring.svg" alt="Spring Framework" />
+									<span class="tooltip">Spring</span>
+								</li>
+							</ul>
+						</article>
+
+						<article class="card">
+							<h3 class="no-text-select">Otras</h3>
+
+							<ul>
+								<li>
+									<img src="assets/icons/android.svg" alt="Android" />
+									<span class="tooltip">Android</span>
+								</li>
+								<li>
+									<img src="assets/icons/docker.svg" alt="Docker" />
+									<span class="tooltip">Docker</span>
+								</li>
+								<li>
+									<img src="assets/icons/figma.svg" alt="Figma" />
+									<span class="tooltip">Figma</span>
+								</li>
+								<li>
+									<img src="assets/icons/git.svg" alt="Git" />
+									<span class="tooltip">Git</span>
+								</li>
+								<li>
+									<img src="assets/icons/github-icon.svg" alt="GitHub" />
+									<span class="tooltip">GitHub</span>
+								</li>
+								<li>
+									<img src="assets/icons/linux-tux.svg" alt="Linux" />
+									<span class="tooltip">Linux</span>
+								</li>
+								<li>
+									<img src="assets/icons/mariadb.svg" alt="MariaDB" />
+									<span class="tooltip">MariaDB</span>
+								</li>
+								<li>
+									<img src="assets/icons/microsoft.svg" alt="Windows" />
+									<span class="tooltip">Windows</span>
+								</li>
+								<li>
+									<img src="assets/icons/mongo.svg" alt="MongoDB" />
+									<span class="tooltip">MongoDB</span>
+								</li>
+								<li>
+									<img src="assets/icons/mysql.svg" alt="MySQL" />
+									<span class="tooltip">MySQL</span>
+								</li>
+								<li>
+									<img src="assets/icons/prestashop.svg" alt="PrestaShop" />
+									<span class="tooltip">PrestaShop</span>
+								</li>
+								<li>
+									<img src="assets/icons/stripe.svg" alt="Stripe" />
+									<span class="tooltip">Stripe</span>
+								</li>
+								<li>
+									<img src="assets/icons/unity.svg" alt="Unity" />
+									<span class="tooltip">Unity</span>
+								</li>
+								<li>
+									<img src="assets/icons/vs-code.svg" alt="Visual Studio Code" />
+									<span class="tooltip">VSCode</span>
+								</li>
+								<li>
+									<img src="assets/icons/wordpress.svg" alt="Wordpress" />
+									<span class="tooltip">Wordpress</span>
+								</li>
+							</ul>
+						</article>
+					</div>
+				</section>
+
+				<section id="me">
+					<header>
+						<h2 class="title-section">Sobre mí</h2>
+					</header>
+
+					<article>
+						<div class="image">
+							<img src="assets/img/me.jpeg" loading="lazy" alt="David Tojo" />
+						</div>
+
+						<div class="texts">
+							<p>
+								¡Hola! Soy un
+								<span class="yellow">desarrollador Fullstack</span>, siempre listo para abordar desafíos y absorber conocimiento constantemente
+								🚀. Mi enfoque versátil me permite trabajar tanto en el <span class="yellow">Frontend</span> como en el
+								<span class="yellow">Backend</span> con fluidez 💻🌟.
+							</p>
+							<div>
+								<p>Algunas de mis fortalezas son:</p>
+								<ul>
+									<li>
+										🛠️
+										<span class="underline">Resolución de problemas</span>: Disfruto superando obstáculos y encontrando soluciones
+										creativas.
+									</li>
+									<li>
+										📅
+										<span class="underline">Organización</span>: Soy meticuloso en la planificación y ejecución de tareas.
+									</li>
+									<li>
+										📚
+										<span class="underline">Gestión multitarea</span>: Puedo manejar varios proyectos simultáneamente sin comprometer la
+										calidad.
+									</li>
+									<li>
+										🤝
+										<span class="underline">Trabajo en equipo</span>: Valoro la colaboración y la sinergia que se logra al trabajar en
+										conjunto. Me gusta ayudar a mis compañer@s para mejorar de manera conjunta.
+									</li>
+								</ul>
+							</div>
+							<p>
+								A lo largo de mi carrera, he aprendido a mejorar mi enfoque laboral. Aunque tiendo a ser perfeccionista, estoy trabajando para
+								equilibrar la calidad y la eficiencia ⚖️. Reconozco la importancia de la colaboración en equipo, lo que acelera el proceso de
+								resolución de problemas y fomenta un ambiente de aprendizaje continuo 🤝.
+							</p>
+						</div>
+					</article>
+				</section>
+
+				<section id="contact">
+					<header>
+						<h2 class="title-section">Contacto</h2>
+					</header>
+
+					<article class="card">
+						<p>
+							¡En resumen, estoy en un viaje 🧳 <span class="yellow">constante de mejora</span> personal y profesional! Cada día, trabajo para ser
+							más <span class="underline">eficiente</span> 🤖, <span class="underline">colaborativo</span> 🤝 y
+							<span class="underline">adaptable</span> en mi enfoque laboral 🧑‍💼. Estoy emocionado por las oportunidades de crecimiento 🪴 que me
+							esperan y estoy comprometido a seguir <span class="yellow">evolucionando</span> como profesional 💡.
+						</p>
+						<p>
+							Si deseas ponerte en <span class="yellow">contacto conmigo</span>, no dudes en <span class="underline">enviarme un mensaje</span>.
+							Estoy <span class="yellow">disponible</span> para <span class="underline">colaboraciones</span>,
+							<span class="underline">consultas</span> o simplemente para <span class="underline">charlar</span> sobre proyectos interesantes.
+						</p>
+						<p><span class="yellow">¡Hablemos!</span> 🚀📩</p>
+					</article>
+
+					<article class="links">
+						<ul>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/david-tojo-yebra-581533176/"
+									target="_blank"
+									rel="noopener"
+									title="Perfil de LinkedIn de David Tojo"
+									class="btn all-round"
+								>
+									<img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/t19d" target="_blank" rel="noopener" title="Perfil de GitHub de David Tojo" class="btn all-round">
+									<img src="assets/icons/github.svg" alt="GitHub" />
+								</a>
+							</li>
+							<li>
+								<a href="mailto:proyectostoyedev@gmail.com" title="Enviar correo electrónico a David Tojo" class="btn all-round">
+									<img src="assets/icons/email.svg" alt="Correo electrónico" />
+								</a>
+							</li>
+						</ul>
+					</article>
+				</section>
+			</div>
+		</main>
+
+		<script src="js/background-gradient.js"></script>
+		<script src="js/menu-scroll-effect.js"></script>
+		<script src="js/close-menu.js"></script>
+		<script src="js/download-cv.js"></script>
+	</body>
 </html>

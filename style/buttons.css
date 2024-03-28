@@ -1,0 +1,26 @@
+.btn {
+	background-color: var(--primary_color-light-2_30);
+	color: var(--text_color_white);
+	line-height: 1rem;
+	border: 1px solid var(--primary_color-light-2);
+	border-radius: 5rem;
+	padding: 1rem 1.5rem;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: var(--primary_color);
+		box-shadow: 0 0 2px var(--text_color_white);
+	}
+
+	&.all-round {
+		padding: 1rem;
+	}
+}
+
+.btn.download-cv::after {
+	display: inline-block;
+	content: url("../assets/icons/download.svg");
+	width: 1rem;
+	aspect-ratio: 1/1;
+	margin-left: 0.75rem;
+}

@@ -1,0 +1,42 @@
+:root {
+	/* PRIMARY */
+	--primary_color-light-2_30: #b77bee4d;
+	--primary_color-light-2: #b77bee;
+	--primary_color-light-1: #9f50e7;
+	--primary_color: #8b2be2;
+	--primary_color-dark-1: #780cdb;
+	--primary_color-dark-2: #5906a5;
+	--primary_color-dark-2_95: #5906a5f2;
+
+	/* SECONDARY 1 */
+	--secondary_color_1-light-2_20: #f174d233;
+	--secondary_color_1-light-2: #f174d2;
+	--secondary_color_1-light-1: #ec46c3;
+	--secondary_color_1: #e81eb5;
+	--secondary_color_1-dark-1: #e200aa;
+	--secondary_color_1-dark-2: #b50088;
+
+	/* SECONDARY 2 */
+	--secondary_color_2-light-2_30: #9083ef4d;
+	--secondary_color_2-light-2: #9083ef;
+	--secondary_color_2-light-1: #6c5be9;
+	--secondary_color_2: #4c37e4;
+	--secondary_color_2-dark-1: #2f17dd;
+	--secondary_color_2-dark-2: #1f0caa;
+
+	/* COMPLEMENTARY */
+	--complementary_color-light-2_30: #fff87b4d;
+	--complementary_color-light-2: #fff87b;
+	--complementary_color-light-1: #fff64c;
+	--complementary_color: #fff421;
+	--complementary_color-dark-1: #fff200;
+	--complementary_color-dark-2: #f5e900;
+
+	/* TEXT */
+	--text_color_white: #ffffff;
+	--text_color_dark: #333333;
+	--text_color_light: #a9a3a3;
+
+	/* BACKGROUND */
+	--background_color_white: #ffffff;
+}
