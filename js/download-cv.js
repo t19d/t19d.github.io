@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Función para descargar el archivo PDF
 	function descargarArchivoPDF() {
-		const urlPDF = "/assets/files/David_Tojo_CV_2024-03-28.pdf";
-		const nombreArchivoPDF = "David_Tojo_CV_2024-03-28.pdf";
+		const urlPDF = "/assets/files/David_Tojo_CV.pdf";
+		const nombreArchivoPDF = "David_Tojo_CV.pdf";
 
 		const enlaceDescargaPDF = document.createElement("a");
 		enlaceDescargaPDF.href = urlPDF;
