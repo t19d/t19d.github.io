@@ -12,7 +12,7 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 90px;
 
-	&::selection {
+	& ::selection {
 		background-color: var(--secondary_color_1-light-1);
 	}
 
