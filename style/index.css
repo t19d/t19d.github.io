@@ -12,17 +12,17 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 90px;
 
-	::selection {
+	&::selection {
 		background-color: var(--secondary_color_1-light-1);
 	}
 
-	body {
+	& body {
 		margin: 0;
 		min-height: 100dvh;
 		background-color: var(--primary_color-dark-1);
 		color: var(--text_color_white);
 
-		img {
+		& img {
 			pointer-events: none;
 			-ms-user-select: none;
 			-webkit-user-select: none;
@@ -30,29 +30,29 @@ html {
 			user-select: none;
 		}
 
-		.no-text-select {
+		& .no-text-select {
 			-ms-user-select: none;
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			user-select: none;
 		}
 
-		.max-width {
+		& .max-width {
 			max-width: 1280px;
 			padding-inline: var(--page-space);
 			margin: auto;
 		}
 
-		.underline {
+		& .underline {
 			text-decoration: underline;
 		}
 
-		.yellow {
+		& .yellow {
 			color: var(--complementary_color-light-1);
 			font-weight: bold;
 		}
 
-		header.menu {
+		& header.menu {
 			z-index: 1;
 			position: sticky;
 			top: 0;
@@ -63,12 +63,12 @@ html {
 				box-shadow: 0 1px 1px var(--text_color_white);
 			}
 
-			> .max-width {
+			& > .max-width {
 				@media (max-width: 1024px) {
 					padding-inline: 0;
 				}
 
-				> nav {
+				& > nav {
 					padding-block: var(--page-space);
 
 					@media (max-width: 1024px) {
@@ -76,17 +76,17 @@ html {
 					}
 				}
 
-				.mobile {
+				& .mobile {
 					display: none;
 				}
 
-				.map {
+				& .map {
 					display: grid;
 					grid-template-columns: auto 1fr auto;
 					align-items: center;
 					width: 100%;
 
-					ul {
+					& ul {
 						display: flex;
 						gap: 1rem;
 						justify-content: center;
@@ -94,7 +94,7 @@ html {
 					}
 				}
 
-				.logo {
+				& .logo {
 					max-width: 150px;
 					transition: filter 0.3s;
 
@@ -106,19 +106,19 @@ html {
 						filter: drop-shadow(0 0 3px var(--text_color_white));
 					}
 
-					img {
+					& img {
 						width: 100%;
 						object-fit: container;
 					}
 				}
 
 				@media (max-width: 1024px) {
-					.mobile {
+					& .mobile {
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
 
-						.menu-toggle-checkbox {
+						& .menu-toggle-checkbox {
 							display: none;
 
 							&:checked ~ .menu-toggle-label span {
@@ -140,13 +140,13 @@ html {
 							}
 						}
 
-						.menu-toggle-label {
+						& .menu-toggle-label {
 							cursor: pointer;
 							position: relative;
 							width: 2rem;
 							height: 1.5rem;
 
-							span {
+							& span {
 								position: absolute;
 								top: 0;
 								display: block;
@@ -168,18 +168,18 @@ html {
 					}
 
 					&:has(.menu-toggle-checkbox:checked) {
-						.mobile,
-						.map {
+						& .mobile,
+						& .map {
 							transition: background-color 0.3s;
 							background-color: var(--primary_color-dark-2);
 						}
 
-						.map {
+						& .map {
 							display: flex;
 						}
 					}
 
-					.map {
+					& .map {
 						position: absolute;
 						top: 95%;
 						display: none;
@@ -188,11 +188,11 @@ html {
 						gap: 2.5dvh;
 						box-shadow: 0 1px 1px var(--text_color_white);
 
-						.logo {
+						& .logo {
 							display: none;
 						}
 
-						ul {
+						& ul {
 							flex-direction: column;
 							align-items: center;
 							gap: 2.5dvh;
@@ -202,10 +202,10 @@ html {
 			}
 		}
 
-		main {
+		& main {
 			position: relative;
 
-			.background-gradient {
+			& .background-gradient {
 				z-index: -2;
 				position: fixed;
 				top: 0;
@@ -215,7 +215,7 @@ html {
 				background-image: linear-gradient(var(--primary_color-dark-2), var(--primary_color-dark-1));
 			}
 
-			h2.title-section {
+			& h2.title-section {
 				font-size: 4rem;
 				font-style: italic;
 				font-variation-settings: "wght" 800, "wdth" 62.5;
@@ -232,24 +232,24 @@ html {
 				}
 			}
 
-			.max-width {
+			& .max-width {
 				display: flex;
 				flex-direction: column;
 				gap: 5dvh;
 
-				#top {
+				& #top {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
 					gap: 2.5dvh;
 					padding-top: 5dvh;
 
-					.me-title {
+					& .me-title {
 						display: flex;
 						flex-direction: column;
 						align-items: center;
 
-						img {
+						& img {
 							z-index: -1;
 							max-width: 500px;
 							object-fit: contain;
@@ -258,7 +258,7 @@ html {
 							mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 						}
 
-						h1 {
+						& h1 {
 							font-size: 7.5rem;
 							line-height: 7.5rem;
 							font-style: italic;
@@ -282,7 +282,7 @@ html {
 							}
 						}
 
-						h2 {
+						& h2 {
 							font-size: 2.5rem;
 							font-weight: 500;
 							text-align: center;
@@ -297,23 +297,23 @@ html {
 						}
 					}
 
-					.links {
+					& .links {
 						display: flex;
 						gap: 25px;
 
-						a img {
+						& a img {
 							width: 2rem;
 							aspect-ratio: 1/1;
 						}
 					}
 				}
 
-				#experience {
+				& #experience {
 					display: flex;
 					flex-direction: column;
 					gap: 2.5dvh;
 
-					article.card {
+					& article.card {
 						display: grid;
 						grid-template-columns: auto 1fr;
 						gap: 2.5rem;
@@ -328,21 +328,21 @@ html {
 							gap: 1.5rem;
 						}
 
-						.company {
+						& .company {
 							display: flex;
 							flex-direction: column;
 							align-items: center;
 							gap: 0.5rem;
 							max-width: 150px;
 
-							img {
+							& img {
 								max-width: 100%;
 								aspect-ratio: 1/1;
 								box-shadow: 0 0 2px var(--text_color_white);
 								border-radius: 24px;
 							}
 
-							h3 {
+							& h3 {
 								max-width: 100%;
 								font-weight: 300;
 								letter-spacing: 5px;
@@ -353,14 +353,14 @@ html {
 							@media (max-width: 768px) {
 								max-width: 100%;
 
-								img {
+								& img {
 									max-width: 150px;
 								}
 							}
 						}
 
-						.details {
-							.top {
+						& .details {
+							& .top {
 								display: flex;
 								justify-content: space-between;
 								align-items: center;
@@ -372,12 +372,12 @@ html {
 									gap: 0.25rem;
 								}
 
-								h3 {
+								& h3 {
 									font-size: 1.75rem;
 									font-weight: 600;
 								}
 
-								span {
+								& span {
 									letter-spacing: 5px;
 									font-weight: 250;
 
@@ -387,13 +387,13 @@ html {
 								}
 							}
 
-							ul {
+							& ul {
 								display: flex;
 								flex-direction: column;
 								gap: 0.5rem;
 								padding-top: 0.75rem;
 
-								li {
+								& li {
 									text-wrap: pretty;
 
 									&::before {
@@ -408,12 +408,12 @@ html {
 					}
 				}
 
-				#skills {
+				& #skills {
 					display: flex;
 					flex-direction: column;
 					gap: 2.5dvh;
 
-					.technologies {
+					& .technologies {
 						display: grid;
 						grid-template-columns: repeat(2, 1fr);
 						gap: 50px;
@@ -422,7 +422,7 @@ html {
 							grid-template-columns: 1fr;
 						}
 
-						.card {
+						& .card {
 							display: flex;
 							flex-direction: column;
 							gap: 2.5rem;
@@ -437,7 +437,7 @@ html {
 								}
 							}
 
-							h3 {
+							& h3 {
 								font-size: 2rem;
 								font-variation-settings: "wght" 600, "wdth" 62.5;
 								letter-spacing: 5px;
@@ -446,13 +446,13 @@ html {
 								text-shadow: 0 0 4px var(--secondary_color_1-light-2);
 							}
 
-							ul {
+							& ul {
 								display: flex;
 								flex-wrap: wrap;
 								justify-content: center;
 								gap: 2rem;
 
-								li {
+								& li {
 									position: relative;
 									display: flex;
 									align-items: center;
@@ -463,7 +463,7 @@ html {
 									border-radius: 24px;
 									box-shadow: 0 0 3px var(--secondary_color_1-light-2);
 
-									img {
+									& img {
 										max-width: 75%;
 										object-fit: scale-down;
 									}
@@ -474,7 +474,7 @@ html {
 										transition: all 0.5s;
 									}
 
-									.tooltip {
+									& .tooltip {
 										position: absolute;
 										bottom: 100%;
 										visibility: hidden;
@@ -488,12 +488,12 @@ html {
 					}
 				}
 
-				#me {
+				& #me {
 					display: flex;
 					flex-direction: column;
 					gap: 2.5dvh;
 
-					article {
+					& article {
 						display: grid;
 						grid-template-columns: 1fr 2fr;
 						align-items: center;
@@ -503,13 +503,13 @@ html {
 							grid-template-columns: 1fr;
 						}
 
-						.image {
+						& .image {
 							display: flex;
 							justify-content: center;
 							align-items: center;
 							width: 100%;
 
-							img {
+							& img {
 								max-width: 400px;
 								border-radius: 50%;
 								box-shadow: 0 0 2px var(--text_color_white);
@@ -520,15 +520,15 @@ html {
 							}
 						}
 
-						.texts {
+						& .texts {
 							display: flex;
 							flex-direction: column;
 							gap: 1rem;
 							text-wrap: pretty;
 							padding-inline: 2.5rem;
 
-							ul {
-								li {
+							& ul {
+								& li {
 									&::before {
 										content: "\2713";
 										padding-right: 0.25rem;
@@ -541,13 +541,13 @@ html {
 					}
 				}
 
-				#contact {
+				& #contact {
 					display: flex;
 					flex-direction: column;
 					gap: 2.5dvh;
 					padding-bottom: 5dvh;
 
-					article {
+					& article {
 						&.card {
 							display: grid;
 							gap: 1rem;
@@ -556,7 +556,7 @@ html {
 							border-radius: 24px;
 							box-shadow: 0 0 3px var(--secondary_color_2-light-2);
 
-							p {
+							& p {
 								text-wrap: pretty;
 							}
 						}
