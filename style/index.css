@@ -469,7 +469,6 @@ html {
 									}
 
 									&:hover .tooltip {
-										visibility: visible;
 										opacity: 1;
 										transition: all 0.5s;
 									}
@@ -477,9 +476,8 @@ html {
 									& .tooltip {
 										position: absolute;
 										bottom: 100%;
-										visibility: hidden;
 										opacity: 0;
-										transition: visibility 0.5s, opacity 0.3s;
+										transition: opacity 0.3s;
 										line-height: 2rem;
 									}
 								}
